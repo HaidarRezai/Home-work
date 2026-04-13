@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: hsl(78, 79%, 66%);
+            color: rgb(8, 71, 117);
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            margin: auto;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <img src="./images/pdf.png" alt="">
+    <img src="./../images/images.png" alt="">
+    
+    <script>
+        let x = Math.random() * 50 + 1;
+        x = Math.floor(x);
+        document.getElementById("test").style.borderRadius = x + "%";
+        document.getElementById("test").innerHTML = x + "%";
+    </script>
+    
+</body>
+</html>
