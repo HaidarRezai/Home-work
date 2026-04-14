@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: grid;
+            grid-template-columns: 20% auto 20%;
+            gap: 10px;
+            margin: 10px 15px;
+
+        }
+        header, aside, main, footer{
+            background-color: rgb(167, 200, 189);
+            border: 1px solid black;
+            padding: 20px;
+            box-shadow: 1px 1px 1px 10px 1px gray;
+
+        }
+        header, footer{
+            grid-column-start: 1;
+            grid-column-end: 3 ;
+        }
+        ul{
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+        li{
+            background-color: blue;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }  
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+        <nav>
+            <ul>
+                <li> Application </li>
+                <li> Login </li>
+                <li> Account </li>
+            </ul>
+       </nav> 
+    </header>
+
+    <main>
+        <code>
+            <pre>
+                print("HELo")
+            </pre>
+        </code>
+        <section>
+            <img src="image.png">
+            <h1> Github</h1>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem temporibus aut quisquam optio, beatae eum mollitia quod cum reprehenderit odio natus veritatis est praesentium vel dolores vero amet fugit error!</p>
+        </section>
+
+    </main>
+
+    <aside>Aside
+
+    </aside>
+
+    <footer>
+        <h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum reiciendis dignissimos officia laborum fugit harum quae autem? Deserunt perferendis sit temporibus dignissimos quidem. Enim nostrum minima suscipit iure hic.</p>
+        </h1>
+    </footer>
+</body>
+</html>
