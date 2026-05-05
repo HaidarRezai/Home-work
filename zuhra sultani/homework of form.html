@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All About Me</title>
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            width: 420px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        i {
+            margin-right: 5px;
+        }
+        #uploadText {
+            margin-top: 5px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2> HTML class information- zuhra</h2>
+
+    <form>
+        <label>Upload Your Photo:</label>
+        <input type="file" accept="image/*" onchange="showMessage()">
+
+        <p id="uploadText"></p>
+
+        <label>Name:</label>
+        <input type="text" value="Zuhra">
+
+        <label>Father Name:</label>
+        <input type="text" value="Alijan">
+
+        <label>Last Name:</label>
+        <input type="text" value="Sultani">
+
+        <label>Age:</label>
+        <input type="number" value="15">
+
+        <label>Gender:</label>
+        <select>
+            <option selected>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+        </select>
+
+        <label>Course:</label>
+        <input type="text" value="DPath Destination Scholarship">
+
+        <label>Hobbies:</label>
+        <textarea>Football, Practicing Duolingo</textarea>
+
+        <label>Favorite Subject:</label>
+        <input type="text" value="English and History">
+
+        <button type="submit">
+            <i class="fa fa-paper-plane"></i> Submit
+        </button>
+    </form>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("uploadText").innerText = "✅ Image uploaded successfully!";
+}
+</script>
+
+</body>
+</html>
