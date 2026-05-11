@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zuhra Sultani Portfolio</title>
+
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg,#f7eee4,#e8c79f,#f4e2cb);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    header{
+      width:100%;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(10px);
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+      color:#8a5700;
+
+      transition:0.4s;
+    }
+
+    .logo:hover{
+      transform:scale(1.1);
+      color:#b87912;
+    }
+
+    nav a{
+      text-decoration:none;
+      margin-left:25px;
+      color:#3d2b1f;
+      font-weight:bold;
+
+      transition:0.4s;
+    }
+
+    nav a:hover{
+      color:#b87912;
+    }
+
+    .hero{
+      min-height:100vh;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:70px;
+
+      padding:120px 10%;
+      flex-wrap:wrap;
+    }
+
+    .image-box{
+      width:350px;
+      height:350px;
+
+      background:#e8d7c0;
+
+      border-radius:55% 45% 60% 40%;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+      animation:float 4s ease-in-out infinite;
+    }
+
+    .image-box img{
+      width:280px;
+      height:280px;
+
+      border-radius:50%;
+      object-fit:cover;
+
+      border:5px solid #8a5700;
+    }
+
+    .content{
+      max-width:600px;
+    }
+
+    .content h1{
+      font-size:60px;
+      margin-bottom:15px;
+
+      opacity:0;
+      animation:fadeUp 1s ease forwards;
+    }
+
+    .content h1 span{
+      color:#9c6200;
+    }
+
+    .content h2{
+      font-size:32px;
+      margin-bottom:20px;
+      color:#7a4a10;
+
+      opacity:0;
+      animation:fadeUp 1.4s ease forwards;
+    }
+
+    .content p{
+      line-height:1.9;
+      font-size:18px;
+      margin-bottom:30px;
+
+      opacity:0;
+      animation:fadeUp 1.8s ease forwards;
+    }
+
+    .btn{
+      display:inline-block;
+
+      padding:15px 35px;
+
+      background:#8a5700;
+      color:white;
+
+      text-decoration:none;
+      border-radius:10px;
+
+      transition:0.4s;
+
+      opacity:0;
+      animation:fadeUp 2s ease forwards;
+    }
+
+    .btn:hover{
+      background:#b87912;
+
+      transform:translateY(-5px);
+
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* SOCIAL ICONS */
+
+    .social-icons{
+      display:flex;
+      gap:20px;
+      margin-top:35px;
+
+      opacity:0;
+      animation:fadeUp 2.3s ease forwards;
+    }
+
+    .social-icons a{
+      width:55px;
+      height:55px;
+
+      background:white;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      border-radius:50%;
+
+      text-decoration:none;
+      color:#8a5700;
+
+      font-size:23px;
+
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+      transition:0.4s;
+    }
+
+    .social-icons a:hover{
+      transform:translateY(-8px) scale(1.1);
+
+      background:#8a5700;
+      color:white;
+    }
+
+    footer{
+      text-align:center;
+      background:#8a5700;
+      color:white;
+      padding:20px;
+      font-size:15px;
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes fadeUp{
+
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+
+    }
+
+    @keyframes float{
+
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-15px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .content h1{
+        font-size:42px;
+      }
+
+      .content h2{
+        font-size:26px;
+      }
+
+      .image-box{
+        width:300px;
+        height:300px;
+      }
+
+      .image-box img{
+        width:240px;
+        height:240px;
+      }
+
+      .social-icons{
+        justify-content:center;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">Zuhra</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Services</a>
+      <a href="#">Blogs</a>
+      <a href="#">Contact Us</a>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+
+    <!-- IMAGE -->
+
+    <div class="image-box">
+      <img src="JPJ file" alt="Zuhra">
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+      <h1>Hey I'm <span>Zuhra Sultani</span></h1>
+
+      <h2>Frontend Developer</h2>
+
+      <p>
+        I am a 15-year-old passionate freelancer with skills in web development and translation. I enjoy building modern, clean, and user-friendly websites using HTML, CSS, and JavaScript. I am also skilled in translation work, helping people understand and communicate ideas clearly in English.
+
+I am highly motivated, self-learning, and always improving my skills to reach a professional level. Even at a young age, I focus on delivering high-quality work, paying attention to detail, and creating results that look modern and professional.
+
+My goal is to grow as a developer and freelancer, work on real projects, and build a strong career in the digital world.
+
+      </p>
+
+      <a href="#" class="btn">Download CV</a>
+
+      <!-- SOCIAL ICONS -->
+
+      <div class="social-icons">
+
+        <a href="#">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-facebook"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  
+
+</body>
+</html>
